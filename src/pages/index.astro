@@ -1,0 +1,23 @@
+---
+import Singin from "../components/Singin.astro";
+import Register from "../components/Register.astro";
+import logo from "../icons/logo.svg";
+import Layout from "../layouts/Layout.astro";
+import Logo from "../components/Logo.astro";
+const title = "AceCriollo";
+---
+
+<Layout title={title}>
+    <body class="">
+        <div class="container mx-auto flex xl:max-w-[1200px]">
+            <div class="rounded-30 py-25 px-20 xl:w-1/5 w-20 h-full flex flex-col xl:pr-4">
+                <Singin />
+                <Register />
+            </div>
+            <div class="h-screen w-80p flex gap-8">
+                <div class="bg-white rounded-30 w-80p">hola</div>
+                <div class="bg-white rounded-30 w-40p">hola</div>
+            </div>
+        </div>
+    </body>
+</Layout>

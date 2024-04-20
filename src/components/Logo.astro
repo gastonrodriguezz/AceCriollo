@@ -1,0 +1,8 @@
+---
+import { Image } from "astro:assets";
+import logo from "../icons/logo.svg";
+
+const { alto, clase } = Astro.props;
+---
+
+<Image src={logo} alt="AceCriollo-Logo" height={alto} class={clase} />
