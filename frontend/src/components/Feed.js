@@ -1,17 +1,11 @@
 import React from "react";
-
-const Feed = () =>{
-    return(
-    <div>
-    <div className="flex items-center justify-between">
-        <div>
-            <h1>Feed</h1>
-        </div>
-    </div>
-    </div>
-);
-}
-
-
+import Login from "./Login";
+const Feed = () => {
+	return (
+		<div className="w-[1%]flex items-center justify-between">
+			<Login />
+		</div>
+	);
+};
 
 export default Feed;

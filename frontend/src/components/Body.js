@@ -5,7 +5,7 @@ import Home from "./Home";
 const Body = () => {
 	const appRouter = createBrowserRouter([
 		{
-			path: "/home",
+			path: "/",
 			element: <Home />,
 		},
 		{

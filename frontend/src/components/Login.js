@@ -6,7 +6,7 @@ const Login = () => {
 		setIsLogin(!isLogin);
 	};
 	return (
-		<div className="w-screen h-screen flex items-center justify-center">
+		<div className=" flex items-center justify-center">
 			<div className="flex items-center justify-evenly w-[80%]">
 				<div className="">
 					<img className="h-[300px] " src={Logo} alt="Acecriollo-logo-full" />
