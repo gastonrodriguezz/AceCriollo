@@ -6,14 +6,14 @@ const Login = () => {
 		setIsLogin(!isLogin);
 	};
 	return (
-		<div className=" flex items-center justify-center">
-			<div className="flex items-center justify-evenly w-[80%]">
-				<div className="">
-					<img className="h-[300px] " src={Logo} alt="Acecriollo-logo-full" />
-				</div>
+		<div className=" flex gap-3">
+			<div className="mt-[30%]">
+				<img className=" w-[300px]  " src={Logo} alt="Acecriollo-logo-full" />
+			</div>
+			<div className=" items-top   mt-[10%]">
 				<div>
-					<div className="my-5">
-						<h1 className="flex w-[600px] font-bold text-6xl">Lo que se está jugando ahora</h1>
+					<div className="my-5 ">
+						<h1 className=" w-[600px] font-bold text-6xl">Lo que se está jugando ahora</h1>
 					</div>
 					<h1 className="my-4 mb-2 text-2xl font-bold">{!isLogin ? "Únete Hoy" : "Ingresa a AceCriollo"}</h1>
 					<form className="flex flex-col w-[55%]">
