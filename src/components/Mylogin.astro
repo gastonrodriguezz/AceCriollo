@@ -1,0 +1,56 @@
+---
+import Logo from "../icons/logobig.svg";
+import { atom } from "nanostores";
+import Layout from "../layouts/Layout.astro";
+import { isLogin } from "../stores/store.js";
+
+const title = "Login";
+
+const isMylogin = atom(true);
+
+// Set the store to true when the button is clicked
+function openDialog() {
+	isLogin.set(true);
+}
+
+// Add an event listener to the button
+document.getElementById("openDialog").addEventListener("click", openDialog);
+---
+
+<script></script>
+
+<Layout title={title}>
+	<div class="w-screen h-screen flex items-center justify-center">
+		<div class="flex items-center justify-evenly w-[80%]">
+			<div class="">
+				<img class="h-[300px]" src={Logo.src} alt="Ace-Criollo-Logo" />
+			</div>
+			<div>
+				<div class="my-5">
+					<h1 class="flex w-[600px] font-bold text-6xl">Lo que se está jugando ahora</h1>
+				</div>
+				<h1 class="my-4 mb-2 text-2xl font-bold">{isMylogin ? "Únete Hoy" : "Iniciar sesión en AceCriollo"}</h1>
+				<form class="flex flex-col w-[55%]">
+					{
+						!isMylogin && (
+							<>
+								<input type="text" placeholder="Nombre" class="text-fc outline-greeno border border-white px-4 py-2 rounded-full my-1" />
+								<input type="text" placeholder="Usuario" class="text-fc outline-greeno border border-white px-4 py-2 rounded-full my-1" />
+							</>
+						)
+					}
+					<input type="email" placeholder="Email" class="text-fc outline-greeno border border-white px-4 py-2 rounded-full my-1" />
+					<input type="password" placeholder="Contraseña" class="text-fc outline-greeno border border-white px-4 py-2 rounded-full my-1" />
+					<button id="login" class="bg-greeno border-none py-2 my-4 font-bold rounded-full text-lg"
+						>{!isMylogin ? "Crear Cuenta" : "Iniciar sesión"}</button
+					>
+					<h1>
+						{isMylogin ? "¿No tienes una cuenta?" : "¿Ya tienes una cuenta?"}<span class="font-bold text-greeno cursor-pointer"
+							>{isMylogin ? "Regístrate" : "Inicia Sesión"}</span
+						>
+					</h1>
+				</form>
+			</div>
+		</div>
+	</div>
+</Layout>
