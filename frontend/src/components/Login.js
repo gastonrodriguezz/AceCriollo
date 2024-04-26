@@ -6,17 +6,17 @@ const Login = () => {
 		setIsLogin(!isLogin);
 	};
 	return (
-		<div className=" flex gap-3">
-			<div className="mt-[30%]">
-				<img className=" w-[300px]  " src={Logo} alt="Acecriollo-logo-full" />
-			</div>
-			<div className=" items-top   mt-[10%]">
-				<div>
-					<div className="my-5 ">
-						<h1 className=" w-[600px] font-bold text-6xl">Lo que se está jugando ahora</h1>
+		<div className=" flex  justify-center">
+			<div className="  flex  ">
+				<div className="pr-32 mt-52">
+					<img className="" width={"400px"} src={Logo} alt="Acecriollo-logo-full" />
+				</div>
+				<div className="max-w-[500px]">
+					<div className="my-7  ">
+						<h1 className="  font-bold tracking-[-1.2px] text-[64px] leading-[84px]">Lo que se está jugando ahora</h1>
 					</div>
-					<h1 className="my-4 mb-2 text-2xl font-bold">{!isLogin ? "Únete Hoy" : "Ingresa a AceCriollo"}</h1>
-					<form className="flex flex-col w-[55%]">
+					<h1 className=" mb-20 text-2xl font-bold">{!isLogin ? "Únete Hoy" : "Ingresa a AceCriollo"}</h1>
+					<form className="flex flex-col w-[60%]">
 						{!isLogin && (
 							<>
 								<input type="text" placeholder="Nombre" className="text-fc outline-greeno border border-white px-4 py-2 rounded-full my-1" />
@@ -25,12 +25,13 @@ const Login = () => {
 						)}
 						<input type="email" placeholder="Email" className="text-fc outline-greeno border border-white px-4 py-2 rounded-full my-1" />
 						<input type="password" placeholder="Contraseña" className="text-fc outline-greeno border border-white px-4 py-2 rounded-full my-1" />
-						<button id="login" className="bg-greeno border-none py-2 my-4 font-bold rounded-full text-lg">
+						<button id="login" className="bg-greeno border-none py-1 my-4 font-bold rounded-full text-lg">
 							{!isLogin ? "Crear Cuenta" : "Iniciar sesión"}
 						</button>
-						<h1>
+						<h1 className="flex gap-1">
 							{isLogin ? "¿No tienes una cuenta?" : "¿Ya tienes una cuenta?"}
-							<span className="font-bold text-greeno cursor-pointer" onClick={loginSignupHandler}>
+
+							<span className=" font-bold text-greeno cursor-pointer" onClick={loginSignupHandler}>
 								{isLogin ? "Regístrate" : "Inicia Sesión"}
 							</span>
 						</h1>
