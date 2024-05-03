@@ -72,3 +72,9 @@ export const Login = async (req, res) => {
 		console.log(error);
 	}
 };
+export const Logout = (req, res) => {
+	return res.cookie('token', '', { expiresIn: new Date(Date.now()) }).json({
+		message: 'El usuario ha cerrado la sesión correctamente',
+		success: true,
+	});
+};
